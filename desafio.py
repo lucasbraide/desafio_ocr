@@ -123,7 +123,7 @@ def folder_img_to_text(folder):
 for i in files:
     test_img('images/' + i)
 '''
-folder_img_to_text('images/')
+folder_img_to_text('images/') #roda o código passando como parametro a pasta de imagens
 
 
 
