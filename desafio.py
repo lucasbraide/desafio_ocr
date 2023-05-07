@@ -29,6 +29,7 @@ def binarize_image(img):
     return bw_img
 
 def noise_removal(img):
+    ''' Recebe a imagem e a retorna sem o ruido'''
     kernel = np.ones((1, 1), np.uint8)
     img = cv.dilate(img, kernel, iterations=1)
     kernel = np.ones((1, 1), np.uint8)
@@ -37,7 +38,7 @@ def noise_removal(img):
     img = cv.medianBlur(img, 3)
     return (img)
 
-def thin_font(img):
+def thin_font(img): 
     img = cv.bitwise_not(img)
     kernel = np.ones((2,2),np.uint8)
     img = cv.erode(img, kernel, iterations=1)
@@ -119,7 +120,7 @@ def folder_img_to_text(folder):
             write_image_txt(image_path_txt, image_cv)
 
 
-'''files = os.listdir('images/') -> mostra todas as imagens tratadas
+'''files = os.listdir('images/') # mostra todas as imagens tratadas
 for i in files:
     test_img('images/' + i)
 '''
