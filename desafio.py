@@ -119,11 +119,11 @@ def folder_img_to_text(folder):
             write_image_txt(image_path_txt, image_cv)
 
 
-'''files = os.listdir('images/')
+'''files = os.listdir('images/') -> mostra todas as imagens tratadas
 for i in files:
     test_img('images/' + i)
 '''
-folder_img_to_text('images/')
+folder_img_to_text('images/') #executa o código chamando como parametro a pasta de imagens
 
 
 
